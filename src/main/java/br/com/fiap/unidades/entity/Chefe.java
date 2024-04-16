@@ -8,7 +8,12 @@ import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
 import jakarta.persistence.UniqueConstraint;
 
@@ -26,16 +31,26 @@ import jakarta.persistence.UniqueConstraint;
 
 public class Chefe {
 
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SQ_CHEFE")
+    @SequenceGenerator(name = "SQ_CHEFE", sequenceName = "SQ_CHEFE", allocationSize = 1)
+    @Column(name = "ID_CHEFE")
     private Long id;
 
+    @Column(name = "SUBISTITUTO_CHEFE")
     private Boolean substituto;
 
+    @Column(name = "USER_CHEFE")
     private Usuario usuario;
 
+    @Column(name = "UNI_CHEFE")
     private Unidade unidade;
 
+    @Column(name = "DT_INICIO")
     private LocalDateTime inicio;
 
+    @Column(name = "DT_FIM")
     private LocalDateTime fim;
 
 }
