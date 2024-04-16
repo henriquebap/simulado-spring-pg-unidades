@@ -23,6 +23,7 @@ public class PessoaRequest {
     @NotEmpty(message = "Sobrenome não pode ser vazio")
     private String sobrenome;
 
+    //Sem Regex de email para teste
     @Email(message = "Email inválido")
     private String email;
 
