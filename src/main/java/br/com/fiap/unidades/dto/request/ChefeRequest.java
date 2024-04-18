@@ -12,15 +12,15 @@ import java.time.LocalDateTime;
 @EqualsAndHashCode(callSuper = true)
 public class ChefeRequest extends AbstractRequest {
 
-    private Boolean substituto;
+        private Boolean substituto;
 
-    @NotNull(message = "Usuário é obrigatório")
-    private Usuario usuario;
+        @NotNull(message = "Usuário é obrigatório")
+        private Usuario usuario;
 
-    @NotNull(message = "Unidade é obrigatória")
-    private Unidade unidade;
+        @NotNull(message = "Unidade é obrigatória")
+        private Unidade unidade;
 
-    private LocalDateTime inicio;
+        private LocalDateTime inicio;
 
-    private LocalDateTime fim;
+        private LocalDateTime fim;
 }
