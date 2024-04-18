@@ -35,8 +35,8 @@ public class ChefeService implements ServiceDTO<Chefe, ChefeRequest, ChefeRespon
         return ChefeResponse.builder()
                 .id(e.getId())
                 .substituto(e.getSubstituto())
-                .usuario(e.getUsuario())
-                .unidade(e.getUnidade())
+                // .usuario(e.getUsuario())
+                // .unidade(e.getUnidade())
                 .inicio(e.getInicio())
                 .fim(e.getFim())
                 .build();
